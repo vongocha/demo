@@ -1,0 +1,9 @@
+---
+- hosts: centos
+  become: yes
+  tasks:
+  - name: Disable firewalld
+    service:
+      name: firewalld
+      state: stopped
+      enabled: no

@@ -1,0 +1,15 @@
+---
+- name: Run ALL1
+  hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+    - import_playbook: ubuntu_update_upgrade.yaml
+
+- name: Run ALL2
+  hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+    - import_playbook: centos_update_upgrade.yaml
+
